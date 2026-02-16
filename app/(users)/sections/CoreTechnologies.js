@@ -3,8 +3,8 @@ import React from 'react'
 
 const CoreTechnologies = () => {
     return (
-        <>
-            <div className="py-[90px] flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden px-[50px]">
+        <div className='antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] overflow-hidden py-[90px]'>
+            <div className="max-w-7xl m-auto flex flex-col items-center justify-center relative px-8 lg:px-0">
                 <h2 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-2xl font-bold text-transparent md:text-4xl lg:text-5xl leading-[1.1] p-[1px]">
                     Core Technologies
                 </h2>
@@ -142,7 +142,7 @@ const CoreTechnologies = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
