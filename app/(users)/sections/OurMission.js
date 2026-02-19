@@ -1,78 +1,67 @@
+import { GlareCard } from '@/components/ui/glare-card'
 import React from 'react'
-import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-);
+
 
 const OurMission = () => {
-    const items = [
-  {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Power of Communication",
-    description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  },
-];
+
   return (
-    <BentoGrid className="max-w-4xl mx-auto">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          icon={item.icon}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-        />
-      ))}
-    </BentoGrid>
+    <div className='antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] overflow-hidden py-[90px]'>
+      <div className='max-w-7xl m-auto px-8 lg:px-0'>
+        <h2 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-2xl font-bold text-transparent md:text-4xl lg:text-5xl leading-[1.1] p-[1px]">
+          Real Orbital Impact
+        </h2>
+        <p className="mx-auto mt-4 max-w-[90%] md:max-w-2xl text-center text-[12px] md:text-base font-normal text-neutral-300 opacity-[0.9]">
+          Our satellite deployments, autonomous orbital programs, and deep-space initiatives power next-generation space infrastructure across the globe and beyond.
+        </p>
+        <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8'>
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+            <img
+              className="h-full w-full absolute inset-0 object-cover"
+              src="https://img.freepik.com/premium-photo/satellite-wallpaper_665280-55784.jpg?uid=R39373662&ga=GA1.1.1161016753.1764785010&semt=ais_related_payload_trends&w=740&q=80"
+              alt="Abstract colorful gradient background"
+            />
+            <p className="font-bold text-white text-lg z-10">ORION-1</p>
+            <p className="font-normal text-base text-neutral-200 mt-4 z-10">
+              First AI-assisted orbital satellite providing climate monitoring and terrain analysis.
+            </p>
+          </GlareCard>
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+            <img
+              className="h-full w-full absolute inset-0 object-cover"
+              src="https://img.freepik.com/premium-photo/satellite-with-black-background-word-satellite-left_981168-7900.jpg?uid=R39373662&ga=GA1.1.1161016753.1764785010&semt=ais_related_payload_trends&w=740&q=80"
+              alt="Abstract colorful gradient background"
+            />
+            <p className="font-bold text-white text-lg z-10">POLARIS NET</p>
+            <p className="font-normal text-base text-neutral-200 mt-4 z-10">
+              Satellite communication network delivering autonomous positioning and telemetry optimization.
+            </p>
+          </GlareCard>
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+            <img
+              className="h-full w-full absolute inset-0 object-cover"
+              src="https://img.freepik.com/premium-photo/satellite-white-black_1028093-6582.jpg?uid=R39373662&ga=GA1.1.1161016753.1764785010&semt=ais_related_payload_trends&w=740&q=80"
+              alt="Abstract colorful gradient background"
+            />
+            <p className="font-bold text-white text-lg z-10">HELIOS PROP-X</p>
+            <p className="font-normal text-base text-neutral-200 mt-4 z-10">
+              Experimental propulsion validation mission for long-duration deep-orbit satellites.
+            </p>
+          </GlareCard>
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+            <img
+              className="h-full w-full absolute inset-0 object-cover"
+              src="https://img.freepik.com/premium-photo/robotic-lander-deploying-scientific-instruments-moons-surface_1327465-64082.jpg?uid=R39373662&ga=GA1.1.1161016753.1764785010&semt=ais_related_payload_trends&w=740&q=80"
+              alt="Abstract colorful gradient background"
+            />
+            <p className="font-bold text-white text-lg z-10">LUNA-GRID</p>
+            <p className="font-normal text-base text-neutral-200 mt-4 z-10">
+              Modular lunar communication and mapping satellite supporting surface exploration.
+            </p>
+          </GlareCard>
+        </div>
+      </div>
+    </div>
   )
 }
 
