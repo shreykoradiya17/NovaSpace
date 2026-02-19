@@ -26,7 +26,7 @@ export const Timeline = ({
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="w-full antialiased bg-white dark:bg-black font-sans md:px-10"
       ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-6 lg:px-0">
         <h2 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-2xl font-bold text-transparent md:text-4xl lg:text-5xl leading-[1.1] p-[1px]">
