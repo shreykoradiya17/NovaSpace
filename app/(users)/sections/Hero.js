@@ -16,7 +16,7 @@ const Hero = () => {
                 className="-top-0 left-10 md:-top-20 lg:left-60"
                 fill="white"
             />
-            <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0 flex flex-col items-center gap-2 justify-center">
+            <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-20 flex flex-col items-center gap-2 justify-center">
                 <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-6xl lg:text-7xl leading-[1.1]">
                     Building Next-Gen<br /> Space Systems.
                 </h1>
