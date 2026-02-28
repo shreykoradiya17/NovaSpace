@@ -6,9 +6,10 @@ const Footer = () => {
         <footer className="w-full py-14 pt-0 dark:bg-black dark:bg-grid-white/[0.05]">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto">
-                    <a href="https://pagedone.io/" className="flex justify-center ">
+                    <a href="/" className="flex justify-center ">
                         <img src="/NovaSpaceLogo.png" alt="NovaSpace Logo" className="h-[50px] w-auto" />
                     </a>
+                    <p className="text-center text-white/60 bg-[#1c5b7747] px-4 py-2 text-sm rounded-full w-fit mx-auto mt-4">Building the Future Beyond Earth</p>
                     <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 pb-8 mb-10 border-b border-white/10">
                         <li><a href="#" className="text-white/60 hover:text-white transition-colors duration-250">Technology</a></li>
                         <li><a href="#" className=" text-white/60 hover:text-white transition-colors duration-250">Missions</a></li>
