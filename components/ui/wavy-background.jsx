@@ -74,9 +74,11 @@ export const WavyBackground = ({
 
   let animationId;
   const render = () => {
+    ctx.filter = "none";
     ctx.fillStyle = backgroundFill || "black";
     ctx.globalAlpha = waveOpacity || 0.5;
     ctx.fillRect(0, 0, w, h);
+    ctx.filter = `blur(${blur}px)`;
     drawWave(5);
     animationId = requestAnimationFrame(render);
   };
@@ -104,7 +106,7 @@ export const WavyBackground = ({
         ref={canvasRef}
         id="canvas"
         style={{
-          ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
+          ...(isSafari ? { filter: `blur(${blur}px)`, transform: 'scale(1.1)' } : {}),
         }}></canvas>
       <div className={cn("relative z-10", className)} {...props}>
         {children}
