@@ -23,7 +23,7 @@ const content = [
                 src="https://img.freepik.com/premium-photo/close-up-large-metal-object-building_974546-96377.jpg?uid=R105757506&ga=GA1.1.424530527.1762595245&semt=ais_hybrid&w=740&q=80"
                 width={300}
                 height={300}
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover grayscale hover:scale-[1.03] transition-all ease-in duration-300"
                 alt="linear board demo" />
         ),
     },
@@ -47,7 +47,7 @@ const content = [
                 src="https://img.freepik.com/premium-photo/cargo-space-craft-earth-planet-dark-background-sci-fi-wallpaper-space-station-orbiting-earth-space-ship-space-art-wallpaper-solar-observatory-elements-this-image-furnished-by-nasa-3d-illustration_150455-17241.jpg?uid=R105757506&ga=GA1.1.424530527.1762595245&w=740&q=80"
                 width={300}
                 height={300}
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover grayscale hover:scale-[1.03] transition-all ease-in duration-300"
                 alt="linear board demo" />
         ),
     },
@@ -71,7 +71,7 @@ const content = [
                 src="https://img.freepik.com/free-photo/control-table-spacecraft-from-inside_23-2151828221.jpg?uid=R105757506&ga=GA1.1.424530527.1762595245&w=740&q=80"
                 width={300}
                 height={300}
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover grayscale hover:scale-[1.03] transition-all ease-in duration-300"
                 alt="linear board demo" />
         ),
     },
@@ -95,7 +95,7 @@ const content = [
                 src="https://img.freepik.com/premium-photo/space-station-orbiting-blue-planet-3d-illustration_659132-711.jpg?uid=R105757506&ga=GA1.1.424530527.1762595245&w=740&q=80"
                 width={300}
                 height={300}
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover grayscale hover:scale-[1.03] transition-all ease-in duration-300"
                 alt="linear board demo" />
         ),
     },
