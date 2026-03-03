@@ -106,7 +106,7 @@ export const WavyBackground = ({
         ref={canvasRef}
         id="canvas"
         style={{
-          ...(isSafari ? { filter: `blur(${blur}px)`, transform: 'scale(1.1)' } : {}),
+          ...(isSafari ? { filter: `blur(${blur}px)`, transform: 'scale(1.2)', touchAction: 'none', userSelect: 'none' } : {}),
         }}></canvas>
       <div className={cn("relative z-10", className)} {...props}>
         {children}
