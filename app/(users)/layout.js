@@ -21,7 +21,7 @@ export const metadata = {
 import LenisProvider from "@/components/LenisProvider";
 
 export default function RootLayout({ children }) {
-  console.log(children, 'children in layout');
+  // console.log(children, 'children in layout');
   return (
     <html lang="en">
       <body

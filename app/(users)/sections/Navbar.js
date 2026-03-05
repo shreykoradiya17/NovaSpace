@@ -2,17 +2,18 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 // ─────────────────────────────────────────────
 // Data
 // ─────────────────────────────────────────────
 
 const NAV_LINKS = [
-  { label: "Home", href: "#" },
-  { label: "Technology", href: "#technology" },
-  { label: "Missions", href: "#missions" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Technology", href: "/technology" },
+  { label: "Missions", href: "/missions" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 // ─────────────────────────────────────────────
@@ -26,13 +27,13 @@ function cn(...classes) {
 
 function NavLink({ href, label }) {
   return (
-    <a
+    <Link
       href={href}
       className="relative text-sm font-medium text-white/60 hover:text-white transition-colors duration-250 group"
     >
       {label}
       {/* <span className="absolute -bottom-0.5 left-0 h-px w-0 rounded-full  transition-all duration-300 group-hover:w-full" /> */}
-    </a>
+    </Link>
   );
 }
 
@@ -178,9 +179,9 @@ export default function Navbar() {
           )}
         >
           {/* ── Logo ─────────────────────── */}
-          <a href="#" className="flex-shrink-0 select-none">
+          <Link href="/" className="flex-shrink-0 select-none">
             <img src="/NovaSpaceLogo.png" alt="NovaSpace Logo" className="h-8 w-auto" />
-          </a>
+          </Link>
 
           {/* ── Desktop Links ─────────────── */}
           <div className="hidden md:flex items-center gap-7 lg:gap-9">
