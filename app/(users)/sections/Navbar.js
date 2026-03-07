@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // ─────────────────────────────────────────────
 // Data
@@ -26,10 +27,16 @@ function cn(...classes) {
 
 
 function NavLink({ href, label }) {
+  const pathname = usePathname();
+  const isActive = pathname === href || (pathname?.startsWith(href) && href !== '/');
+
   return (
     <Link
       href={href}
-      className="relative text-sm font-medium text-white/60 hover:text-white transition-colors duration-250 group"
+      className={cn(
+        "relative text-sm font-medium transition-colors duration-250 group",
+        isActive ? "text-white" : "text-white/60 hover:text-white"
+      )}
     >
       {label}
       {/* <span className="absolute -bottom-0.5 left-0 h-px w-0 rounded-full  transition-all duration-300 group-hover:w-full" /> */}
@@ -63,6 +70,7 @@ function GlowButton({ children, className = "" }) {
 // ─────────────────────────────────────────────
 
 function MobileMenu({ open, onClose }) {
+  const pathname = usePathname();
   // Lock body scroll while open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -110,18 +118,27 @@ function MobileMenu({ open, onClose }) {
 
         {/* Navigation links */}
         <nav className="flex flex-col flex-1 justify-center px-8 gap-0">
-          {NAV_LINKS.map((link, i) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={onClose}
-              className="group flex items-center gap-3 py-5 text-3xl font-light text-white/50 hover:text-white transition-colors duration-200 border-b border-white/[0.05]"
-              style={{ transitionDelay: open ? `${i * 55 + 80}ms` : "0ms" }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex-shrink-0" />
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link, i) => {
+            const isActive = pathname === link.href || (pathname?.startsWith(link.href) && link.href !== '/');
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={onClose}
+                className={cn(
+                  "group flex items-center gap-3 py-5 text-3xl font-light transition-colors duration-200 border-b border-white/[0.05]",
+                  isActive ? "text-white font-normal" : "text-white/50 hover:text-white"
+                )}
+                style={{ transitionDelay: open ? `${i * 55 + 80}ms` : "0ms" }}
+              >
+                <span className={cn(
+                  "w-1.5 h-1.5 rounded-full bg-white transition-opacity duration-200 flex-shrink-0",
+                  isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                )} />
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Bottom CTA */}
