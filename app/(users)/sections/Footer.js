@@ -10,7 +10,7 @@ const Footer = () => {
                     <Link href="/" className="flex justify-center ">
                         <img src="/NovaSpaceLogo.png" alt="NovaSpace Logo" className="h-[50px] w-auto" />
                     </Link>
-                    <p className="text-center text-white/60 bg-[#1c5b7747] px-4 py-2 text-sm rounded-full w-fit mx-auto mt-4">Building the Future Beyond Earth</p>
+                    <p className="text-center text-white/60 bg-[#35353547] border border-[#35353547] px-4 py-2 text-sm rounded-full w-fit mx-auto mt-4">Building the Future Beyond Earth</p>
                     <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 pb-8 mb-10 border-b border-white/10">
                         <li><Link href="/technology" className="text-white/60 hover:text-white transition-colors duration-250">Technology</Link></li>
                         <li><Link href="/missions" className=" text-white/60 hover:text-white transition-colors duration-250">Missions</Link></li>
