@@ -1,5 +1,6 @@
 import { BackgroundBeams } from '@/components/ui/background-beams'
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
+import Link from 'next/link'
 import React from 'react'
 
 const MissionHero = () => {
@@ -19,7 +20,7 @@ const MissionHero = () => {
                         as="button"
                         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
                     >
-                        <span>Explore Technology</span>
+                        <Link href="/technology">Explore Technology</Link>
                     </HoverBorderGradient>
                 </div>
             </div>

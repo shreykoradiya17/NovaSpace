@@ -48,7 +48,7 @@ function NavLink({ href, label }) {
 // Glow CTA Button
 // ─────────────────────────────────────────────
 
-function GlowButton({ children, className = "" }) {
+function GlowButton({ children, className = "cursor-pointer " }) {
   return (
     <button
       className={cn(
@@ -142,11 +142,11 @@ function MobileMenu({ open, onClose }) {
         </nav>
 
         {/* Bottom CTA */}
-        <div className="px-6 pb-10 pt-4">
+        <Link href="/contact" className="px-6 pb-10 pt-4">
           <GlowButton className="w-full py-4 text-base !rounded-2xl">
             Start Collaboration
           </GlowButton>
-        </div>
+        </Link>
       </div>
     </>
   );
@@ -208,9 +208,9 @@ export default function Navbar() {
           </div>
 
           {/* ── Desktop CTA ──────────────── */}
-          <div className="hidden md:block flex-shrink-0">
+          <Link href="/contact" className="hidden md:block flex-shrink-0 cursor-pointer">
             <GlowButton>Start Collaboration</GlowButton>
-          </div>
+          </Link>
 
           {/* ── Mobile Hamburger ─────────── */}
           <button

@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/spotlight";
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 import React from 'react'
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -30,7 +31,7 @@ const Hero = () => {
                         as="button"
                         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
                     >
-                        <span>View Missions</span>
+                        <Link href="/missions">View Missions</Link>
                     </HoverBorderGradient>
                 </div>
             </div>
