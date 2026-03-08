@@ -10,7 +10,7 @@ const OurStrory = () => {
                     <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
                         <img
                             className="h-full w-full absolute inset-0 object-cover"
-                            src="https://img.freepik.com/premium-photo/rocket-engine-being-refueled-before-scheduled-launch_1327465-57898.jpg?uid=R105757506&ga=GA1.1.424530527.1762595245&semt=ais_hybrid&w=740&q=80"
+                            src="https://img.freepik.com/premium-photo/futuristic-space-station-orbits-earth-featuring-detailed-solar-panels-glowing-lights-set-against-backdrop-planets-blue-atmosphere_941549-9767.jpg?uid=R105757506&ga=GA1.1.424530527.1762595245&w=740&q=80"
                             alt="Abstract colorful gradient background"
                         />
                     </GlareCard>
