@@ -11,7 +11,7 @@ const TimelineDemo = () => {
         {
             title: "2018",
             content: (
-                <div>
+                <div key="2018">
                     <h2 className="text-lg md:text-4xl mb-4 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent max-w-4xl">
                         Company Founded
                     </h2>
@@ -31,7 +31,7 @@ const TimelineDemo = () => {
         {
             title: "2020",
             content: (
-                <div>
+                <div key="2020">
                     <h2 className="text-lg md:text-4xl mb-4 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent max-w-4xl">
                         First Satellite Deployment
                     </h2>
@@ -51,7 +51,7 @@ const TimelineDemo = () => {
         {
             title: "2022",
             content: (
-                <div>
+                <div key="2022">
                     <h2 className="text-lg md:text-4xl mb-4 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent max-w-4xl">
                         Global Research Partnerships
                     </h2>
@@ -71,7 +71,7 @@ const TimelineDemo = () => {
         {
             title: "2024",
             content: (
-                <div>
+                <div key="2024">
                     <h2 className="text-lg md:text-4xl mb-4 bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent max-w-4xl">
                         Autonomous Orbital Platform
                     </h2>
