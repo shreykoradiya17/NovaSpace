@@ -1,9 +1,9 @@
 import React from 'react';
-import ContactHero from '../sections/ContactHero';
+import ContactHero from './components/ContactHero';
 import { Mail, Handshake, MapPin } from 'lucide-react';
 import { CardSpotlight } from "@/components/ui/card-spotlight";
-import ContactCard from '../sections/ContactCard';
-import ContactForm from '../sections/ContactForm';
+import ContactCard from './components/ContactCard';
+import ContactForm from './components/ContactForm';
 import HomeCta from '../sections/HomeCta';
 
 const ContactPage = () => {
