@@ -1,8 +1,8 @@
-import AboutHero from "../sections/AboutHero";
+import AboutHero from "./components/AboutHero";
 import HomeCta from "../sections/HomeCta";
-import MissionVission from "../sections/MissionVission";
-import OurStrory from "../sections/OurStrory";
-import { OurTeam } from "../sections/OurTeam";
+import MissionVission from "./components/MissionVission";
+import OurStrory from "./components/OurStrory";
+import { OurTeam } from "./components/OurTeam";
 
 const AboutPage = () => {
     return (
