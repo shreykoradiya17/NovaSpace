@@ -1,8 +1,8 @@
 import React from 'react'
-import TechnologyHero from '../sections/TechnologyHero'
+import TechnologyHero from './components/TechnologyHero'
 import CoreTechnologies from '../sections/CoreTechnologies'
-import TechnologyDetails from '../sections/TechnologyDetails'
-import SystemArchitecture from '@/components/ui/SystemArchitecture'
+import TechnologyDetails from './components/TechnologyDetails'
+import SystemArchitecture from './components/SystemArchitecture'
 import HomeCta from '../sections/HomeCta'
 
 const page = () => {
@@ -23,7 +23,6 @@ const page = () => {
             </div>
 
             <HomeCta ctaTitle="Let’s Engineer the Next Orbital Breakthrough" ctaDescription="Work with our engineers to design and deploy advanced systems for modern orbital operations." ctaButton="Get Started" />
-
         </>
     )
 }
