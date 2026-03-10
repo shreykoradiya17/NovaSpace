@@ -19,6 +19,7 @@ export const metadata = {
 };
 
 import LenisProvider from "@/components/LenisProvider";
+import QueryProvider from "@/components/QueryProvider";
 
 export default function RootLayout({ children }) {
   // console.log(children, 'children in layout');
@@ -27,11 +28,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LenisProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </LenisProvider>
+        <QueryProvider>
+          <LenisProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </LenisProvider>
+        </QueryProvider>
       </body>
     </html>
   );

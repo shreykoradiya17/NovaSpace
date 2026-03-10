@@ -1,12 +1,20 @@
+"use client";
+
+import { useHomeData } from "@/hooks/use-queries";
 import CoreTechnologies from "./sections/CoreTechnologies";
 import GlobalPartners from "./sections/GlobalPartners";
 import Hero from "./sections/Hero";
 import HomeCta from "./sections/HomeCta";
 import OurMission from "./sections/OurMission";
-import TechnologyHero from "./technology/components/TechnologyHero";
 import TimelineDemo from "./sections/Timeline";
 
 export default function Home() {
+  const { data } = useHomeData();
+
+  if (data) {
+    console.log("Home API Data:", data);
+  }
+
   return (
     <>
       <Hero />
