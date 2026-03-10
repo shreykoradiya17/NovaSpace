@@ -9,15 +9,15 @@ import OurMission from "./sections/OurMission";
 import TimelineDemo from "./sections/Timeline";
 
 export default function Home() {
-  const { data } = useHomeData();
+  const { data, isLoading } = useHomeData();
 
-  if (data) {
-    console.log("Home API Data:", data);
+  if (isLoading) {
+    return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
   }
 
   return (
     <>
-      <Hero />
+      <Hero data={data?.hero} />
       <GlobalPartners />
       <CoreTechnologies />
       <TimelineDemo />

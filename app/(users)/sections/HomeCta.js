@@ -5,7 +5,7 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 
 const HomeCta = ({ ctaTitle, ctaDescription, ctaButton }) => {
     return (
-        <WavyBackground className="w-full overflow-hidden mx-auto pb-40 px-4">
+        <WavyBackground className="w-full overflow-hidden mx-auto pb-40 px-4 antialiased">
             <h2 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-2xl font-bold text-transparent md:text-4xl lg:text-5xl leading-[1.1] p-[1px]">
                 {ctaTitle}
             </h2>

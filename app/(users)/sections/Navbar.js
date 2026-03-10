@@ -91,7 +91,7 @@ function MobileMenu({ open, onClose }) {
       {/* Slide-in panel */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 z-[201] w-full max-w-sm flex flex-col",
+          "fixed inset-y-0 right-0 z-[201] w-full flex flex-col",
           "bg-[#050510]",
           "transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]",
           open ? "translate-x-0" : "translate-x-full"

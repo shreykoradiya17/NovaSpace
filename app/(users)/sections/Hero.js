@@ -4,7 +4,8 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient'
 import React from 'react'
 import Link from "next/link";
 
-const Hero = () => {
+const Hero = ({ data }) => {
+    console.log(data, 'jjjjj')
     return (
         <div className="relative flex h-[30rem] md:h-[40rem] w-full overflow-hidden  bg-black antialiased md:items-center md:justify-center">
             <div
