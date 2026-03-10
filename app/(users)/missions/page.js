@@ -1,6 +1,6 @@
 import React from 'react'
-import MissionHero from '../sections/MissionHero'
-import MissionListing from '../sections/MissionListing'
+import MissionHero from './components/MissionHero'
+import MissionListing from './components/MissionListing'
 import TimelineDemo from '../sections/Timeline'
 import HomeCta from '../sections/HomeCta'
 
