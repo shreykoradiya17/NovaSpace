@@ -198,29 +198,37 @@ export default function SystemArchitecture({ className }) {
     };
 
     return (
-        <div style={{ height: '500px' }} className={`bg-black overflow-hidden shadow-2xl max-w-7xl m-auto border border-white/10 rounded-lg w-full ${className}`}>
-            <ReactFlow
-                nodes={nodes}
-                edges={edges}
-                onNodesChange={onNodesChange}
-                onEdgesChange={onEdgesChange}
-                nodeTypes={nodeTypes}
-                defaultEdgeOptions={defaultEdgeOptions}
-                fitView
-                nodesDraggable={true}
-                nodesConnectable={false}
-                elementsSelectable={true}
-                deleteKeyCode={null}
-                selectionKeyCode={null}
-                multiSelectionKeyCode={null}
-                proOptions={{ hideAttribution: true }}
-            >
-                {/* <Background color="#1e293b" variant="dots" gap={20} size={1} /> */}
-                {/* <Controls
+        <div className='w-full bg-black py-[90px]'>
+            <h2 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-2xl font-bold text-transparent md:text-4xl lg:text-5xl leading-[1.1] p-[1px]">
+                Integrated Orbital Architecture
+            </h2>
+            <p className="mx-auto mt-4 max-w-[90%] md:max-w-2xl text-center text-[12px] md:text-base font-normal text-neutral-300 opacity-[0.9]">
+                Our orbital ecosystem connects satellites, ground infrastructure, and AI systems to enable real-time telemetry, intelligent processing, and reliable mission control.
+            </p>
+            <div style={{ height: '500px' }} className={`bg-black overflow-hidden shadow-2xl max-w-7xl m-auto border border-white/10 rounded-lg w-full ${className}`}>
+                <ReactFlow
+                    nodes={nodes}
+                    edges={edges}
+                    onNodesChange={onNodesChange}
+                    onEdgesChange={onEdgesChange}
+                    nodeTypes={nodeTypes}
+                    defaultEdgeOptions={defaultEdgeOptions}
+                    fitView
+                    nodesDraggable={true}
+                    nodesConnectable={false}
+                    elementsSelectable={true}
+                    deleteKeyCode={null}
+                    selectionKeyCode={null}
+                    multiSelectionKeyCode={null}
+                    proOptions={{ hideAttribution: true }}
+                >
+                    {/* <Background color="#1e293b" variant="dots" gap={20} size={1} /> */}
+                    {/* <Controls
                         showInteractive={false}
                         className="!bg-slate-900 !border-slate-800 !fill-slate-100"
                     /> */}
-            </ReactFlow>
+                </ReactFlow>
+            </div>
         </div>
     );
 }
