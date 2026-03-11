@@ -19,10 +19,10 @@ export default function Home() {
     <>
       <Hero data={data?.hero} />
       <GlobalPartners />
-      <CoreTechnologies />
+      <CoreTechnologies data={data?.coreTechnologies} />
       <TimelineDemo />
-      <OurMission />
-      <HomeCta ctaTitle="Ready to Build the Next Breakthrough in Space?" ctaDescription="Partner with NovaSpace to develop autonomous orbital systems, satellite intelligence, and next-generation aerospace solutions." ctaButton="Start Collaboration" />
+      <OurMission data={data?.ourMission} />
+      <HomeCta data={data?.cta} />
     </>
   );
 }
