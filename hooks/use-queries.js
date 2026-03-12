@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-const BASE_URL = "https://novaspace07.vercel.app/api";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 const fetchData = async (endpoint) => {
     const response = await fetch(`${BASE_URL}${endpoint}`);
