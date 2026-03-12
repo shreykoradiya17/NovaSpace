@@ -119,7 +119,7 @@ const ContactForm = () => {
                                 <div className="space-y-2">
                                     {/* <label htmlFor="email" className="text-sm font-medium text-white/70 ml-1">Transmission Address (Email)</label> */}
                                     <div className="relative group">
-                                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-white/40 group-focus-within:text-purple-400 transition-colors">
+                                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-white/40 group-focus-within:text-indigo-400 transition-colors">
                                             <Mail className="w-5 h-5" />
                                         </div>
                                         <input
@@ -129,7 +129,7 @@ const ContactForm = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full bg-black/50 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-300"
+                                            className="w-full bg-black/50 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all duration-300"
                                             placeholder="Email Address"
                                         />
                                     </div>
@@ -139,7 +139,7 @@ const ContactForm = () => {
                                 <div className="space-y-2">
                                     {/* <label htmlFor="organization" className="text-sm font-medium text-white/70 ml-1">Fleet / Organization</label> */}
                                     <div className="relative group">
-                                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-white/40 group-focus-within:text-emerald-400 transition-colors">
+                                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-white/40 group-focus-within:text-indigo-400 transition-colors">
                                             <Building className="w-5 h-5" />
                                         </div>
                                         <input
@@ -148,7 +148,7 @@ const ContactForm = () => {
                                             name="organization"
                                             value={formData.organization}
                                             onChange={handleChange}
-                                            className="w-full bg-black/50 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 transition-all duration-300"
+                                            className="w-full bg-black/50 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all duration-300"
                                             placeholder="Organization"
                                         />
                                     </div>
@@ -158,7 +158,7 @@ const ContactForm = () => {
                                 <div className="space-y-2">
                                     {/* <label htmlFor="message" className="text-sm font-medium text-white/70 ml-1">Mission Briefing</label> */}
                                     <div className="relative group">
-                                        <div className="absolute top-4 left-0 pl-4 pointer-events-none text-white/40 group-focus-within:text-blue-400 transition-colors">
+                                        <div className="absolute top-4 left-0 pl-4 pointer-events-none text-white/40 group-focus-within:text-indigo-400 transition-colors">
                                             <MessageSquare className="w-5 h-5" />
                                         </div>
                                         <textarea
@@ -168,7 +168,7 @@ const ContactForm = () => {
                                             onChange={handleChange}
                                             required
                                             rows={4}
-                                            className="w-full bg-black/50 border border-white/10 rounded-2xl py-4 pt-3 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300 resize-none"
+                                            className="w-full bg-black/50 border border-white/10 rounded-2xl py-4 pt-3 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all duration-300 resize-none"
                                             placeholder="Describe your message..."
                                         />
                                     </div>
