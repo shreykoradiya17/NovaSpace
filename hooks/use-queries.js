@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 
-const BASE_URL = "http://localhost:5001/api";
+// const BASE_URL = "http://localhost:5001/api";
 
 const fetchData = async (endpoint) => {
-    const response = await fetch(`${BASE_URL}${endpoint}`);
+    const response = await fetch(`/api${endpoint}`);
     if (!response.ok) {
         throw new Error(`Error fetching ${endpoint}: ${response.statusText}`);
     }

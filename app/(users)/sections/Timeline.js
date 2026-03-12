@@ -21,9 +21,11 @@ const TimelineDemo = () => {
                     <Image
                         src={comp2018}
                         alt="company 2018"
-                        width={500}
-                        height={500}
-                        className="h-[auto_!important] ] w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        width={800}
+                        height={800}
+                        quality={100}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                        className="h-auto w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                     />
                 </div>
             ),
@@ -40,10 +42,12 @@ const TimelineDemo = () => {
                     </p>
                     <Image
                         src={comp2020}
-                        alt="company 2018"
-                        width={500}
-                        height={500}
-                        className="h-[auto_!important] ] w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        alt="company 2020"
+                        width={800}
+                        height={800}
+                        quality={100}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                        className="h-auto w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                     />
                 </div>
             ),
@@ -60,10 +64,12 @@ const TimelineDemo = () => {
                     </p>
                     <Image
                         src={comp2022}
-                        alt="company 2018"
-                        width={500}
-                        height={500}
-                        className="h-[auto_!important] ] w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        alt="company 2022"
+                        width={800}
+                        height={800}
+                        quality={100}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                        className="h-auto w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                     />
                 </div>
             ),
@@ -80,10 +86,12 @@ const TimelineDemo = () => {
                     </p>
                     <Image
                         src={comp2024}
-                        alt="company 2018"
-                        width={500}
-                        height={500}
-                        className="h-[auto_!important] ] w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        alt="company 2024"
+                        width={800}
+                        height={800}
+                        quality={100}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                        className="h-auto w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                     />
                 </div>
             ),
