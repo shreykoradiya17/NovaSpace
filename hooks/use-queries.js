@@ -1,6 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "/api";
+const getApiBaseUrl = () => {
+    const envUrl = process.env.NEXT_PUBLIC_API_URL;
+    // If running in browser and URL contains localhost but site is not on localhost, fallback to /api
+    if (typeof window !== "undefined" && envUrl?.includes("localhost") && !window.location.hostname.includes("localhost")) {
+        return "/api";
+    }
+    return envUrl || "/api";
+};
+
+const BASE_URL = getApiBaseUrl();
 
 const fetchData = async (endpoint) => {
     const response = await fetch(`${BASE_URL}${endpoint}`);
