@@ -24,13 +24,14 @@ export const AnimatedTooltip = ({
   const translateX = useSpring(useTransform(x, [-100, 100], [-50, 50]), springConfig);
 
   const handleMouseMove = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const offsetX = event.nativeEvent?.offsetX ?? 0;
+
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
 
     animationFrameRef.current = requestAnimationFrame(() => {
-      const rect = event.currentTarget.getBoundingClientRect();
-      const offsetX = (event.nativeEvent?.offsetX ?? 0);
       const halfWidth = rect.width / 2;
       x.set(offsetX - halfWidth);
     });
