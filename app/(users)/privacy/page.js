@@ -2,6 +2,15 @@ import React from 'react';
 import { Shield, Lock, Eye, Server, Database, UserCheck } from 'lucide-react';
 import HomeCta from '../sections/HomeCta';
 
+export const metadata = {
+    title: "Privacy & Security Protocol",
+    description: "Learn about NovaSpace's commitment to data security and privacy. Our protocol detail how we protect mission-critical information.",
+    openGraph: {
+        title: "Privacy & Security | NovaSpace Protocol",
+        description: "Detailed information on how NovaSpace handles and secures your aerospace mission data.",
+    },
+};
+
 const PrivacyPolicyPage = () => {
     return (
         <main className="min-h-screen bg-black text-zinc-300 selection:bg-white/30 pt-24 md:pt-32">

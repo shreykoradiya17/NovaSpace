@@ -1,27 +1,16 @@
-"use client";
-import React from 'react';
-import ContactHero from './components/ContactHero';
-import { Mail, Handshake, MapPin } from 'lucide-react';
-import { CardSpotlight } from "@/components/ui/card-spotlight";
-import ContactCard from './components/ContactCard';
-import ContactForm from './components/ContactForm';
-import HomeCta from '../sections/HomeCta';
-import { useContactData } from '@/hooks/use-queries';
+import ContactClient from "./ContactClient";
+
+export const metadata = {
+    title: "Contact Us",
+    description: "Get in touch with NovaSpace mission control. Whether you're a prospective partner or have questions about our technology, our team is ready to assist.",
+    openGraph: {
+        title: "Contact NovaSpace | Mission Control",
+        description: "Connect with NovaSpace for partnership inquiries, technical support, and media requests.",
+    },
+};
 
 const ContactPage = () => {
-    const { data, isLoading } = useContactData();
+    return <ContactClient />;
+};
 
-    if (isLoading) {
-        return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
-    }
-    return (
-        <>
-            <ContactHero data={data?.hero} />
-            <ContactCard />
-            <ContactForm />
-            <HomeCta data={data?.cta} />
-        </>
-    )
-}
-
-export default ContactPage
+export default ContactPage;

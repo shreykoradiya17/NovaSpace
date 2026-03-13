@@ -1,29 +1,16 @@
-"use client";
-import React from 'react';
-import TechnologyHero from './components/TechnologyHero'
-import CoreTechnologies from '../sections/CoreTechnologies'
-import TechnologyDetails from './components/TechnologyDetails'
-import SystemArchitecture from './components/SystemArchitecture'
-import HomeCta from '../sections/HomeCta'
-import { useTechnologyData } from '@/hooks/use-queries'
+import TechnologyClient from "./TechnologyClient";
 
-const page = () => {
-    const { data, isLoading } = useTechnologyData();
+export const metadata = {
+    title: "Technology & Engineering",
+    description: "Discover the cutting-edge technology behind NovaSpace. From advanced propulsion systems to orbital logistics software, explore our technical capabilities.",
+    openGraph: {
+        title: "NovaSpace Technology | Advanced Aerospace Engineering",
+        description: "In-depth look at the innovative systems and architecture driving NovaSpace's mission success.",
+    },
+};
 
-    if (isLoading) {
-        return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
-    }
+const TechnologyPage = () => {
+    return <TechnologyClient />;
+};
 
-    console.log(data, 'techno')
-    return (
-        <>
-            <TechnologyHero data={data?.hero} />
-            <CoreTechnologies data={data?.coreTechnologies} />
-            <TechnologyDetails />
-            <SystemArchitecture className='mt-5' />
-            <HomeCta data={data?.cta} />
-        </>
-    )
-}
-
-export default page
+export default TechnologyPage;

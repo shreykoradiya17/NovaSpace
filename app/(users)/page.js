@@ -1,28 +1,14 @@
-"use client";
+import HomeClient from "./HomeClient";
 
-import { useHomeData } from "@/hooks/use-queries";
-import CoreTechnologies from "./sections/CoreTechnologies";
-import GlobalPartners from "./sections/GlobalPartners";
-import Hero from "./sections/Hero";
-import HomeCta from "./sections/HomeCta";
-import OurMission from "./sections/OurMission";
-import TimelineDemo from "./sections/Timeline";
+export const metadata = {
+  title: "NovaSpace | Pioneering the Future of Space Exploration",
+  description: "NovaSpace is at the forefront of aerospace innovation, providing expert consulting and mission coordination for the next generation of space travel.",
+  openGraph: {
+    title: "NovaSpace | Home",
+    description: "Welcome to NovaSpace, where we pioneer the future of space exploration.",
+  },
+};
 
 export default function Home() {
-  const { data, isLoading } = useHomeData();
-
-  if (isLoading) {
-    return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
-  }
-
-  return (
-    <>
-      <Hero data={data?.hero} />
-      <GlobalPartners />
-      <CoreTechnologies data={data?.coreTechnologies} />
-      <TimelineDemo />
-      <OurMission data={data?.ourMission} />
-      <HomeCta data={data?.cta} />
-    </>
-  );
+  return <HomeClient />;
 }

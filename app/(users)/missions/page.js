@@ -1,25 +1,16 @@
-"use client";
-import React from 'react';
-import MissionHero from './components/MissionHero'
-import MissionListing from './components/MissionListing'
-import TimelineDemo from '../sections/Timeline'
-import HomeCta from '../sections/HomeCta'
-import { useMissionsData } from '@/hooks/use-queries';
+import MissionsClient from "./MissionsClient";
 
-const page = () => {
-    const { data, isLoading } = useMissionsData();
+export const metadata = {
+    title: "Our Missions",
+    description: "Explore NovaSpace's past, current, and future missions. From orbital launches to deep-space exploration, see how we're pushing boundaries.",
+    openGraph: {
+        title: "NovaSpace Missions | Orbital Logistics & Launch",
+        description: "Detailed overview of NovaSpace's mission portfolio and aerospace engineering milestones.",
+    },
+};
 
-    if (isLoading) {
-        return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
-    }
-    return (
-        <>
-            <MissionHero data={data?.hero} />
-            <MissionListing data={data?.missions} />
-            <TimelineDemo />
-            <HomeCta data={data?.cta} />
-        </>
-    )
-}
+const MissionsPage = () => {
+    return <MissionsClient />;
+};
 
-export default page
+export default MissionsPage;

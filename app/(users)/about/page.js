@@ -1,26 +1,16 @@
-"use client";
-import AboutHero from "./components/AboutHero";
-import HomeCta from "../sections/HomeCta";
-import MissionVission from "./components/MissionVission";
-import OurStrory from "./components/OurStrory";
-import { OurTeam } from "./components/OurTeam";
-import { useAboutData } from "@/hooks/use-queries";
+import AboutClient from "./AboutClient";
+
+export const metadata = {
+    title: "About Us",
+    description: "Learn more about NovaSpace's mission, vision, and the team dedicated to pioneering the next generation of space exploration.",
+    openGraph: {
+        title: "About NovaSpace | Our Story & Vision",
+        description: "Discover the journey and the people behind NovaSpace's revolutionary space technology.",
+    },
+};
 
 const AboutPage = () => {
-    const { data, isLoading } = useAboutData();
-
-    if (isLoading) {
-        return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
-    }
-    return (
-        <>
-            <AboutHero data={data?.hero} />
-            <OurStrory data={data?.story} />
-            <MissionVission missionData={data?.mission} visionData={data?.vision} />
-            <OurTeam />
-            <HomeCta data={data?.cta} />
-        </>
-    )
-}
+    return <AboutClient />;
+};
 
 export default AboutPage;
