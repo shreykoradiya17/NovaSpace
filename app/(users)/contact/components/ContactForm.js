@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Send, Rocket, User, Mail, Building, MessageSquare } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Send, Rocket, User, Mail, Building, MessageSquare, CheckCircle2 } from 'lucide-react';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const ContactForm = () => {
         organization: '',
         message: ''
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,7 +21,50 @@ const ContactForm = () => {
         e.preventDefault();
         // Handle form submission logic here
         console.log('Form submitted:', formData);
+        setIsSubmitted(true);
     };
+
+    if (isSubmitted) {
+        return (
+            <section className="relative py-24 bg-black overflow-hidden flex items-center justify-center min-h-[60vh]">
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                    <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px]" />
+                    <div className="absolute bottom-[10%] left-[10%] w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-[150px]" />
+                </div>
+
+                <div className="relative z-10 text-center space-y-8 p-10 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-3xl max-w-lg mx-auto">
+                    <motion.div
+                        initial={{ scale: 0, rotate: -180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                        className="mx-auto w-24 h-24 bg-emerald-500/20 rounded-full flex items-center justify-center border border-emerald-500/30"
+                    >
+                        <CheckCircle2 className="w-12 h-12 text-emerald-400" />
+                    </motion.div>
+
+                    <div>
+                        <h2 className="text-3xl font-bold text-white mb-2">Transmission Received</h2>
+                        <p className="text-zinc-400">
+                            Your mission briefing has been securely transmitted to NovaSpace Command.
+                            Our team will analyze the data and contact you via secure link shortly.
+                        </p>
+                    </div>
+
+                    <div className="pt-4 flex flex-col items-center gap-4">
+                        <div className="text-xs font-mono text-emerald-500/60 uppercase tracking-widest px-4 py-1 border border-emerald-500/20 rounded-full bg-emerald-500/5">
+                            Auth-Token: {Math.random().toString(36).substring(2, 10).toUpperCase()}
+                        </div>
+                        <button
+                            onClick={() => setIsSubmitted(false)}
+                            className="text-sm text-zinc-500 hover:text-white transition-colors"
+                        >
+                            Send another message
+                        </button>
+                    </div>
+                </div>
+            </section>
+        );
+    }
 
     return (
         <section className="relative py-24 bg-black overflow-hidden">

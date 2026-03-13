@@ -6,12 +6,13 @@ import TechnologyDetails from './components/TechnologyDetails'
 import SystemArchitecture from './components/SystemArchitecture'
 import HomeCta from '../sections/HomeCta'
 import { useTechnologyData } from '@/hooks/use-queries'
+import SpaceLoader from '@/components/SpaceLoader';
 
 const TechnologyClient = () => {
     const { data, isLoading } = useTechnologyData();
 
     if (isLoading) {
-        return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
+        return <SpaceLoader />;
     }
 
     return (

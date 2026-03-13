@@ -5,12 +5,13 @@ import MissionListing from './components/MissionListing'
 import TimelineDemo from '../sections/Timeline'
 import HomeCta from '../sections/HomeCta'
 import { useMissionsData } from '@/hooks/use-queries';
+import SpaceLoader from '@/components/SpaceLoader';
 
 const MissionsClient = () => {
     const { data, isLoading } = useMissionsData();
 
     if (isLoading) {
-        return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
+        return <SpaceLoader />;
     }
     return (
         <>

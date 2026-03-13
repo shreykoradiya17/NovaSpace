@@ -5,12 +5,13 @@ import MissionVission from "./components/MissionVission";
 import OurStrory from "./components/OurStrory";
 import { OurTeam } from "./components/OurTeam";
 import { useAboutData } from "@/hooks/use-queries";
+import SpaceLoader from "@/components/SpaceLoader";
 
 const AboutClient = () => {
     const { data, isLoading } = useAboutData();
 
     if (isLoading) {
-        return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
+        return <SpaceLoader />;
     }
     return (
         <>
