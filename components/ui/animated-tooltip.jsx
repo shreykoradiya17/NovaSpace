@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   motion,
-  useTransform,
   AnimatePresence,
-  useMotionValue,
-  useSpring,
 } from "motion/react";
 
 export const AnimatedTooltip = ({
@@ -16,33 +13,12 @@ export const AnimatedTooltip = ({
   children
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const springConfig = { stiffness: 100, damping: 15 };
-  const x = useMotionValue(0);
-  const animationFrameRef = useRef(null);
-
-  const rotate = useSpring(useTransform(x, [-100, 100], [-45, 45]), springConfig);
-  const translateX = useSpring(useTransform(x, [-100, 100], [-50, 50]), springConfig);
-
-  const handleMouseMove = (event) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const offsetX = event.nativeEvent?.offsetX ?? 0;
-
-    if (animationFrameRef.current) {
-      cancelAnimationFrame(animationFrameRef.current);
-    }
-
-    animationFrameRef.current = requestAnimationFrame(() => {
-      const halfWidth = rect.width / 2;
-      x.set(offsetX - halfWidth);
-    });
-  };
 
   return (
     <div
       className="relative group w-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onMouseMove={handleMouseMove}
     >
       <AnimatePresence mode="wait">
         {isHovered && (
@@ -60,8 +36,6 @@ export const AnimatedTooltip = ({
             }}
             exit={{ opacity: 0, y: 20, scale: 0.6 }}
             style={{
-              translateX: translateX,
-              rotate: rotate,
               whiteSpace: "nowrap",
             }}
             className="absolute top-16 left-1/2 z-[100] flex -translate-x-1/2 flex-col items-center justify-center rounded-md bg-black px-4 py-2 text-xs shadow-2xl min-w-max border border-white/10"
